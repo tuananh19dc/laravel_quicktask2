@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -40,5 +41,15 @@ class User extends Authenticatable
     public function tasks()
     {
         return $this->belongsToMany(Task::class, 'task_user', 'user_id', 'task_id');
+    }
+
+    public function getFullnameAttribute()
+    {
+        return  $this->attributes['first_name'] . " " . $this->attributes['last_name'];
+    }
+
+    public function setUsernameAttribute($username)
+    {
+        $this->attributes['username'] = Str::of($username)->slug('-');
     }
 }
