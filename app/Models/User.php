@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
 class User extends Authenticatable
 {
     use Notifiable;
+    const IS_ADMIN = 1;
+    const IS_USER = 0;
 
     /**
      * The attributes that are mass assignable.

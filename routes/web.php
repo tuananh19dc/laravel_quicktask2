@@ -29,3 +29,4 @@ Route::prefix('tasks')->group(function () {
     Route::get('index', 'TaskController@index')->name('Task.index');
 });
     
+Route::resource('users', 'UserController')->middleware('IsAdmin');
