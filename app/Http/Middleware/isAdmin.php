@@ -20,7 +20,7 @@ class IsAdmin
         if (Auth::check() && Auth::user()->isAdmin == User::IS_ADMIN) {
             return $next($request);
         }
-        
+
         return redirect()->back();
     }
 }
