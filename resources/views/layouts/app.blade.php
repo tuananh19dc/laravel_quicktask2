@@ -29,6 +29,15 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{!! route('change-language', ['en']) !!}">{{__('English')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{!! route('change-language', ['vi']) !!}">{{__('Vietnamese')}}</a>
+                    </li>
+                </ul>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -57,13 +66,12 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->first_name." ".Auth::user()->last_name }}
+                                    {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                                             document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -74,6 +82,7 @@
                                 </div>
                             </li>
                         @endguest
+                        
                     </ul>
                 </div>
             </div>

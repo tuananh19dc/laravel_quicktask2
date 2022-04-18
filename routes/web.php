@@ -35,3 +35,4 @@ Route::resource('users', 'UserController')->middleware('IsAdmin');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('change-language/{language}', 'LanguageController@language')->name('change-language');
