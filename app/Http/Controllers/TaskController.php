@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -13,7 +14,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -45,7 +46,8 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        //
+        $tasks = User::find($id)->tasks;
+        return view('users.Tasks',compact('tasks'));
     }
 
     /**
