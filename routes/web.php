@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,7 @@ Route::prefix('tasks')->group(function () {
 });
     
 Route::resource('users', 'UserController')->middleware('IsAdmin');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
