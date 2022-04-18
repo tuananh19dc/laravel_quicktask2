@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::resource('users', 'UserController');
 
-Route::prefix('tasks')->group(function () { 
+Route::prefix('tasks')->group(function () {
     Route::get('show/{id}', 'TaskController@show')->name('Task.show');
     Route::get('create', 'TaskController@create')->name('Task.create');
     Route::post('store', 'TaskController@store')->name('Task.store');
@@ -29,7 +29,7 @@ Route::prefix('tasks')->group(function () {
     Route::delete('destroy/{id}', 'TaskController@destroy')->name('Task.destroy');
     Route::get('index', 'TaskController@index')->name('Task.index');
 });
-    
+
 Route::resource('users', 'UserController')->middleware('IsAdmin');
 
 Auth::routes();
