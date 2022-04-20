@@ -1,0 +1,20 @@
+{
+  "name": "laravel_quicktask2",
+  "description": "",
+  "main": "",
+  "authors": [
+    "tuananh19dc <tuananh19dc@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tuananh19dc/laravel_quicktask2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
