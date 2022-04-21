@@ -26,6 +26,7 @@
     <link id="pagestyle"
         href="{{ asset('bower_components/material-dashboard/assets/css/material-dashboard.css?v=3.0.2') }}"
         rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -48,7 +49,7 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link text-white active bg-gradient-primary" href="../pages/tables.html">
+                    <a class="nav-link text-white active bg-gradient-primary" href="{{ route('users.index') }}">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">table_view</i>
                         </div>
@@ -60,7 +61,7 @@
         </div>
 
     </aside>
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg mt-5">
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         @yield('content')
     </main>
 

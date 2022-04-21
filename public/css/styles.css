@@ -1,3 +1,33 @@
-.p12-24{
-    padding: 12px 24px
+.p12-24 {
+    padding: 12px 24px;
+}
+
+.mh-600 {
+    min-height: 600px !important;
+}
+
+.mh-363 {
+    min-height: 363px !important;
+}
+
+.border-radius-8 {
+    border-radius: 8px;
+}
+
+.container-fluid.py-4.mt-5,
+.main-content .mt-3 {
+    position: relative;
+}
+.alert-success.w-20.d-flex {
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 5%;
 }
